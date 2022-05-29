@@ -75,7 +75,7 @@ def delete(id):
 
 # グラフの作成
 @app.route('/graph/<int:id>')   
-def clustering(id):
+def create_graph(id):
     data = Data.query.get(id)
     file_path = data.file_path
     graphpy(file_path)
